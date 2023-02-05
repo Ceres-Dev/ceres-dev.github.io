@@ -1,0 +1,43 @@
+.Link {
+  transition: color 0.2s;
+}
+
+.Link::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  transition: all 0.3s;
+  background-color: #DC2626;
+}
+
+.Link:hover {
+  color: #DC2626;
+}
+
+.Link:hover::after {
+  width: 100%;
+}
+
+.DesktopNav {
+  display: flex;
+}
+
+.HamburgerBtn {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .HamburgerBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .DesktopNav {
+    display: none;
+  }
+}
