@@ -29,6 +29,19 @@
   display: none;
 }
 
+.Logo {
+  filter: drop-shadow(0 0 0 #DC2626);
+  transition: filter 0.2s, transform 0.3s;
+}
+
+.Logo:hover {
+  filter: drop-shadow(0 0 20px #DC2626);
+}
+
+.Logo:active {
+  transform: scale(0.8);
+}
+
 @media screen and (max-width: 768px) {
   .HamburgerBtn {
     display: flex;

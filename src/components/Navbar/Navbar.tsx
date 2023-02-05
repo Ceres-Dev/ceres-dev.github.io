@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import Logo from '../../assets/logo.png';
 import './Navbar.css';
 
@@ -15,22 +17,34 @@ function Navbar() {
 
   return (
     <div className="w-screen h-16 bg-[#181818]/80 backdrop-blur-md flex items-center">
-      <img src={Logo} alt="Valence" className="w-12 h-12 ml-6" />
+      <a href="https://projectvalence.github.io">
+        <img src={Logo} alt="Valence" className="Logo w-12 h-12 ml-6" />
+      </a>
       <div className="DesktopNav w-auto h-full ml-auto ">
         <li className="Link w-auto h-full flex items-center justify-center px-3 mr-3 relative flex-col">
-          <a className=" relative inline-block">Home</a>
+          <Link to="/" className="w-full h-full flex items-center justify-center">
+            Home
+          </Link>
         </li>
         <li className="Link w-auto h-full flex items-center justify-center px-3 mr-3 relative flex-col">
-          <a className="relative inline-block">Downloads</a>
+          <Link to="/downloads" className="w-full h-full flex items-center justify-center">
+            Downloads
+          </Link>
         </li>
         <li className="Link w-auto h-full flex items-center justify-center px-3 mr-3 relative flex-col">
-          <a className="relative inline-block">Repository</a>
+          <Link to="/source" className="w-full h-full flex items-center justify-center">
+            Source
+          </Link>
         </li>
         <li className="Link w-auto h-full flex items-center justify-center px-3 mr-3 relative flex-col">
-          <a className="relative inline-block">Blog</a>
+          <Link to="/blogs" className="w-full h-full flex items-center justify-center">
+            Blog
+          </Link>
         </li>
         <li className="Link w-auto h-full flex items-center justify-center px-3 mr-3 relative flex-col">
-          <a className="relative inline-block">About</a>
+          <Link to="/about" className="w-full h-full flex items-center justify-center">
+            About
+          </Link>
         </li>
       </div>
       <div
