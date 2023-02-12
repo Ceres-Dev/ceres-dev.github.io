@@ -16,7 +16,7 @@ function Navbar() {
   }
 
   return (
-    <div className="w-screen h-16 bg-[#181818]/80 backdrop-blur-md flex items-center">
+    <div className="w-screen h-16 bg-[#181818]/80 backdrop-blur-md flex items-center  top-0 left-0 right-0">
       <a href="https://projectvalence.github.io">
         <img src={Logo} alt="Valence" className="Logo w-12 h-12 ml-6" />
       </a>
@@ -51,19 +51,19 @@ function Navbar() {
         className={`flex-col w-full h-auto MobileNav absolute top-16 bg-[#181818]/80 backdrop-blur-md ${isMobileNavOpen()} `}
       >
         <li className="w-auto h-auto flex items-center justify-center py-3 mb-3 relative flex-col">
-          <a className=" relative inline-block">Home</a>
+          <Link to="/" className=" relative inline-block">Home</Link>
         </li>
         <li className="w-auto h-auto flex items-center justify-center py-3 mb-3 relative flex-col">
-          <a className="relative inline-block">Downloads</a>
+          <Link to="/downloads" className="relative inline-block">Downloads</Link>
         </li>
         <li className="w-auto h-auto flex items-center justify-center py-3 mb-3 relative flex-col">
-          <a className="relative inline-block">Repository</a>
+          <Link to="/source" className="relative inline-block">Source</Link>
         </li>
         <li className="w-auto h-auto flex items-center justify-center py-3 mb-3 relative flex-col">
-          <a className="relative inline-block">Blog</a>
+          <Link to="/blogs" className="relative inline-block">Blogs</Link>
         </li>
         <li className="w-auto h-auto flex items-center justify-center py-3 mb-3 relative flex-col">
-          <a className="relative inline-block">About</a>
+          <Link to="/about" className="relative inline-block">About</Link>
         </li>
       </div>
       <button
